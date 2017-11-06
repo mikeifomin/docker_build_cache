@@ -27,6 +27,7 @@ RUN ./configure \
 
 RUN make
 RUN make install
-ENTRYPOINT ["/usr/local/squid/sbin/squid"]
+
+CMD ["/usr/local/squid/sbin/squid"]
 
 
