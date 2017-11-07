@@ -1,9 +1,7 @@
 pipeline:
   docker_build:
     image: plugins/docker
-    #repo: r.mif.io/marflo/server
-    #repo: mikeifomin/docker_build_proxy
-    repo: index.docker.io/docker_build_proxy
+    repo: index.docker.io/mikeifomin/docker_build_proxy
     registry: index.docker.io
     force_tag: true
     tags:
