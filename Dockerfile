@@ -22,6 +22,7 @@ RUN git checkout v4.0
 RUN autoreconf --install
 RUN autoconf
 RUN ./configure \
+    --prefix=/root/squid4
     --with-openssl \
     --enable-ssl-crtd
 
