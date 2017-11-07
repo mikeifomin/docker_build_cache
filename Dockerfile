@@ -1,4 +1,3 @@
-#FROM debian:stretch
 FROM ubuntu:16.04
 
 WORKDIR /root
@@ -22,13 +21,13 @@ RUN git checkout v4.0
 RUN autoreconf --install
 RUN autoconf
 RUN ./configure \
-    --prefix=/root/squid4
+    --prefix=/root/squid4 \
     --with-openssl \
     --enable-ssl-crtd
 
 RUN make
 RUN make install
 
-CMD ["/usr/local/squid/sbin/squid"]
+CMD ["/root/squid4/sbin/squid"]
 
 
