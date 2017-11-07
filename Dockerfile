@@ -21,12 +21,12 @@ RUN git checkout v4.0
 RUN autoreconf --install
 RUN autoconf
 RUN ./configure \
-    --prefix=/ \
+    --prefix= \
     --with-openssl \
     --enable-ssl-crtd
 
 RUN make && make install
 
-CMD ["/sbin/squid"]
+CMD ["/sbin/squid", "-X"]
 
 
